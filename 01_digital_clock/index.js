@@ -15,14 +15,15 @@
 }
 
 // get the element in which time is displayed
-const wrapper = document.getElementById("wrapper");
+const clock = document.getElementById("clock");
 
 // call displayTime each second
-setInterval(displayTime(wrapper), 1000);
+setInterval(displayTime(clock), 1000);
  */
 
-const wrapper = document.getElementById("wrapper");
-setInterval(
-  () => (wrapper.textContent = new Date().toLocaleTimeString()),
-  1000
-);
+const clock = document.getElementById("clock");
+const displayClock = () =>
+  (clock.textContent = new Date().toLocaleTimeString());
+
+displayClock;
+setInterval(displayClock), 1000;
