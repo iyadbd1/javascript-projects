@@ -3,37 +3,44 @@
  * hours, minutes and seconds and with closures:
  *
  */
-function createStopwatch(hours = 0, minutes = 0, seconds = 0) {
+function createStopwatch(hours = 0, minutes = 0, seconds = 0, cseconds = 0) {
   // initialize stopwatch state to off
   state = false;
 
   // method to reset time to 0
   const resetTime = () => {
-    hours = minutes = seconds = 0;
+    hours = minutes = seconds = cseconds = 0;
   };
   // method to get current time in the format HH:MM:SS
   const getTime = function () {
     return `${hours.toString().padStart(2, "0")}:${minutes
       .toString()
-      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${cseconds
+      .toString()
+      .padStart(2, "0")}`;
   };
 
   // method to increment time by 1 second
   const updateTime = () => {
-    if (seconds < 60) {
-      seconds++;
+    if (cseconds < 99) {
+      cseconds++;
     } else {
-      seconds = 0;
-      if (minutes < 60) {
-        minutes++;
+      cseconds = 0;
+      if (seconds < 60) {
+        seconds++;
       } else {
-        minutes = 0;
-        if (hours < 99) {
-          hours++;
+        seconds = 0;
+        if (minutes < 60) {
+          minutes++;
         } else {
-          seconds = 59;
-          minutes = 59;
-          stopSw();
+          minutes = 0;
+          if (hours < 99) {
+            hours++;
+          } else {
+            seconds = 59;
+            minutes = 59;
+            stopSw();
+          }
         }
       }
     }
@@ -57,7 +64,10 @@ let intervalID;
 
 function startSw() {
   // return if stopwatch is already on
-  if (myStopwatch.state === true) return;
+  if (myStopwatch.state === true) {
+    stopSw();
+    return;
+  }
   myStopwatch.state = true;
 
   //   display time
@@ -73,7 +83,7 @@ function startSw() {
     } else {
       stopSw();
     }
-  }, 1000);
+  }, 10);
 }
 
 function resetSw() {

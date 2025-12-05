@@ -26,6 +26,7 @@ h1 {
 
 .sw {
   font-family: monospace;
+  font-weight: bold;
   font-size: 3.5rem;
   color: #333;
 }
@@ -54,7 +55,7 @@ h1 {
   color: #fff;
   padding: 0.5em 1.2em;
   border-radius: 0.4em;
-  border: none;
+  border: 1px solid #333;
 }
 
 .start {
