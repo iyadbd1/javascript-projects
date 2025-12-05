@@ -1,0 +1,15 @@
+/* Import roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Begin reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* End reset */
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
