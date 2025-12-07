@@ -1,0 +1,140 @@
+/* Import roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Begin reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* End reset */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* height: 80vh; */
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.screen {
+  color: #fff;
+  font-size: 3rem;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 12px 12px 0 0;
+  padding: 0.5em 0.5em;
+  height: 100px;
+}
+
+.controls {
+  background-color: hsl(0, 0%, 15%);
+  /* flex: 1; */
+  /* padding: 0.5em; */
+  border-radius: 0 0 12px 12px;
+
+  /* Position */
+  display: grid;
+  grid-template-columns: 80px 3fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  justify-items: center;
+  padding: 1em;
+}
+
+.operations {
+  grid-area: 1 / 1 / 6 / 2;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.digits {
+  grid-area: 1 / 2 / 6 / 3;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: repeat(5, 80px);
+  gap: 10px;
+}
+#digit1 {
+  grid-area: 3/1;
+}
+#digit2 {
+  grid-area: 3/2;
+}
+#digit3 {
+  grid-area: 3/3;
+}
+#digit4 {
+  grid-area: 2/1;
+}
+#digit5 {
+  grid-area: 2/2;
+}
+#digit6 {
+  grid-area: 2/3;
+}
+#digit7 {
+  grid-area: 1/1;
+}
+#digit8 {
+  grid-area: 1/2;
+}
+#digit9 {
+  grid-area: 1/3;
+}
+
+#digit0 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+#dot {
+  grid-area: 4 / 2 / 5 / 3;
+}
+#equal {
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+.controls button {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.digits button {
+  background-color: hsl(0, 0%, 30%);
+}
+
+.operations button {
+  background-color: hsl(30, 100%, 60%);
+}
+
+.digits button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.operations button:hover {
+  background-color: hsl(30, 100%, 70%);
+}
+
+.digits button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.operations button:active {
+  background-color: hsl(30, 100%, 80%);
+}
