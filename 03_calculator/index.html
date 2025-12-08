@@ -8,28 +8,28 @@
   </head>
   <body>
     <div class="container" id="container">
-      <div id="screen" class="screen">0</div>
+      <input id="screen" class="screen" />
       <div id="controls" class="controls">
         <div id="operations" class="operations">
-          <button onclick="calculate('+')" id="add">+</button>
-          <button onclick="calculate('-')" id="sub">-</button>
-          <button onclick="calculate('*')" id="mul">*</button>
-          <button onclick="calculate('/')" id="div">/</button>
-          <button onclick="calculate('c')" id="clear">C</button>
+          <button onclick="appendToScreen('+')" id="add">+</button>
+          <button onclick="appendToScreen('-')" id="sub">-</button>
+          <button onclick="appendToScreen('*')" id="mul">*</button>
+          <button onclick="appendToScreen('/')" id="div">/</button>
+          <button onclick="clearScreen()" id="clear">C</button>
         </div>
         <div id="digits" class="digits">
-          <button onclick="calculate('0')" id="digit0">0</button>
-          <button onclick="calculate('1')" id="digit1">1</button>
-          <button onclick="calculate('2')" id="digit2">2</button>
-          <button onclick="calculate('3')" id="digit3">3</button>
-          <button onclick="calculate('4')" id="digit4">4</button>
-          <button onclick="calculate('5')" id="digit5">5</button>
-          <button onclick="calculate('6')" id="digit6">6</button>
-          <button onclick="calculate('7')" id="digit7">7</button>
-          <button onclick="calculate('8')" id="digit8">8</button>
-          <button onclick="calculate('9')" id="digit9">9</button>
-          <button onclick="calculate('.')" id="dot">.</button>
-          <button onclick="calculate('=')" id="equal">=</button>
+          <button onclick="appendToScreen('0')" id="digit0">0</button>
+          <button onclick="appendToScreen('1')" id="digit1">1</button>
+          <button onclick="appendToScreen('2')" id="digit2">2</button>
+          <button onclick="appendToScreen('3')" id="digit3">3</button>
+          <button onclick="appendToScreen('4')" id="digit4">4</button>
+          <button onclick="appendToScreen('5')" id="digit5">5</button>
+          <button onclick="appendToScreen('6')" id="digit6">6</button>
+          <button onclick="appendToScreen('7')" id="digit7">7</button>
+          <button onclick="appendToScreen('8')" id="digit8">8</button>
+          <button onclick="appendToScreen('9')" id="digit9">9</button>
+          <button onclick="appendToScreen('.')" id="dot">.</button>
+          <button onclick="calculate()" id="equal">=</button>
         </div>
       </div>
     </div>
