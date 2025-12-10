@@ -7,6 +7,8 @@ const buttons = document.querySelectorAll(".option");
 const playerChoiceEl = document.getElementById("player-choice");
 const computerChoiceEl = document.getElementById("computer-choice");
 
+const playerChoiceText = document.getElementById("playerChoiceText");
+const computerChoiceText = document.getElementById("computerChoiceText");
 // result
 const result = document.getElementById("result");
 
@@ -28,17 +30,23 @@ const choices = ["rock", "paper", "scissors"];
 
 function tie() {
   result.textContent = "It's a Tie";
+  result.classList.remove("win");
+  result.classList.remove("lose");
   result.classList.add("tie");
 }
 
 function win() {
   result.textContent = "YOU WIN!";
+  result.classList.remove("lose");
+  result.classList.remove("tie");
   result.classList.add("win");
   playerScore++;
 }
 
 function lose() {
   result.textContent = "YOU LOSE!";
+  result.classList.remove("win");
+  result.classList.remove("tie");
   result.classList.add("lose");
   computerScore++;
 }
@@ -52,8 +60,8 @@ buttons.forEach((button) => {
     computerChoice = choices[randomIn(0, choices.length - 1)];
 
     // display choices
-    playerChoiceEl.textContent += ` ${playerChoice}`;
-    computerChoiceEl.textContent += ` ${computerChoice}`;
+    playerChoiceText.textContent = `${playerChoice}`;
+    computerChoiceText.textContent = `${computerChoice}`;
 
     switch (playerChoice) {
       case computerChoice:
