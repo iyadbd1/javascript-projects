@@ -1,0 +1,39 @@
+/* Import roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Begin reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* End reset */
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  background-color: #eee;
+}
+
+h1 {
+  color: #333;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.option {
+  font-size: 3rem;
+  background-color: dodgerblue;
+  /* height: 50px;
+  width: 50px; */
+  border-radius: 50%;
+  border: 1px solid #333;
+  padding: 0.1em;
+}
