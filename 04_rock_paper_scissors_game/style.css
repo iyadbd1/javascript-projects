@@ -28,12 +28,26 @@ h1 {
   justify-content: center;
   gap: 20px;
 }
+
 .option {
   font-size: 3rem;
-  background-color: dodgerblue;
-  /* height: 50px;
-  width: 50px; */
+  background-color: rgb(128, 192, 255);
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   border: 1px solid #333;
   padding: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.score {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
